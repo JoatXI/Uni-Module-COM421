@@ -1,25 +1,25 @@
 class queue:
     def __init__(self, capacity):
-        self.internalArray = [None] * capacity
+        self.internal_array = [None] * capacity
         self.front = 0
         self.next = 0
         self.queue_size = 0
 
     def add(self, data):
-        self.internalArray[self.next] = data
+        self.internal_array[self.next] = data
         self.next += 1
-        if len(self.internalArray) == self.next:
+        if len(self.internal_array) == self.next:
             self.next = 0
 
     def remove(self):
-        self.internalArray[self.front] = None
+        self.internal_array[self.front] = None
         self.front += 1
-        if len(self.internalArray) == self.front:
+        if len(self.internal_array) == self.front:
             self.front = 0
         return self.front
 
     def __str__(self,):
-        return self.internalArray.__str__()
+        return self.internal_array.__str__()
 
 queue1 = queue(8)
 
