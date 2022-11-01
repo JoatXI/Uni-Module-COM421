@@ -1,26 +1,26 @@
 class stack:
     def __init__(self):
-        self.internalArray = []
+        self.internal_array = []
 
 # Appending items into the array
     def push(self, data):
-        self.internalArray.append(data)
+        self.internal_array.append(data)
 
 # Popping(Deleting and returning the last item in the array)
     def pop(self):
-        if len(self.internalArray) == 0:
+        if len(self.internal_array) == 0:
             print("Stack is empty!")
-        omega = self.internalArray[-1]
-        del self.internalArray[-1]
+        omega = self.internal_array[-1]
+        del self.internal_array[-1]
         return omega
 
     def peek(self):
-        self.internalArray[-1]
-        return self.internalArray[-1]
+        self.internal_array[-1]
+        return self.internal_array[-1]
 
 # Defining how the class content is printed
     def __str__(self):
-        return self.internalArray.__str__()
+        return self.internal_array.__str__()
 
 stack1 = stack()
 stack1.push("January")

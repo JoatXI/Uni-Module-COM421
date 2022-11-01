@@ -1,4 +1,4 @@
-class HashTable:
+class hash_table:
     def __init__(self, nbuckets):
         self.nbuckets = nbuckets
 
@@ -33,7 +33,7 @@ class HashTable:
         return hash_code
 
 
-hashtable = HashTable(10)
+hashtable = hash_table(10)
 
 hashtable.put("cat", "A furry 4 leg animal that goes Meow!")
 print(hashtable)
