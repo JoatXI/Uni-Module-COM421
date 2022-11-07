@@ -1,2 +1,3 @@
 # Uni-Module-COM421
-Data Structures, Algorithm and Mathematics University Module
+
+Solent University's Software Engineering: Data Structures, Algorithm and Mathematics Module lecture task work repository
