@@ -3,7 +3,7 @@ class student:
         self.id = id
         self.name = name
         self.course = course
-        self.mark = 0
+        self.mark = mark_input
         
 # Defining a __str__ method that returns the complete student details as a string.
     def __str__(self):
@@ -11,7 +11,6 @@ class student:
 
     def set_mark(self, mark_input):
         if mark_input >= 0 and mark_input <= 100:
-            self.mark = mark_input
             return True
         else:
             return False
@@ -19,25 +18,24 @@ class student:
 # Defining a method that returns the students' grades as a string based on the mark.
     def get_grade(self):
         if self.mark >= 70:
-            return "First"
+            return "Grade: First"
         elif self.mark >= 60 and self.mark <= 69:
-            return "2/1"
+            return "Grade: 2/1"
         elif self.mark >= 50 and self.mark <= 59:
-            return "2/2"
+            return "Grade: 2/2"
         elif self.mark >= 40 and self.mark <= 49:
-            return "Third"
+            return "Grade: Third"
         else:
-            return "Fail"
+            return "Grade: Fail"
 
 # Returning a boolean indicating whether the mark is above or below the 40.            
     def did_pass(self):
         if self.mark >= 40:
-            return True
+            return f"Pass"
         else:
-            return False
+            return f"Failed"
+   
         
-    
-
 # Creating a list of students/pupils.
 pupils = []
 for num in range(5):
@@ -46,11 +44,12 @@ for num in range(5):
     course_input = input("Enter student course: ")
     mark_input = int(input("Enter student mark: "))
 
-    student1 = student(id_input, name_input, course_input, mark_input)
+    student1 = student(id_input, name_input, course_input)
     pupils.append(student1)
     
     print(student1.get_grade())
     print(student1.did_pass())
+    print(" ")     # To help clear up the console (not important)
     
 for x in pupils:
     print(x)
