@@ -49,8 +49,8 @@ for num in range(5):
     
     print(student1.get_grade())
     print(student1.did_pass())
+    print(student1.set_mark(99))
     print(" ")     # To help clear up the console (not important)
     
 for x in pupils:
     print(x)
-    
