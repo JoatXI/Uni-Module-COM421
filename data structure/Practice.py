@@ -15,7 +15,7 @@ class student:
         else:
             return False
 
-# Defining a method that returns the students' grades as a string based on the mark.
+# Defining a method that returns the students' grades as a string based on the marks.
     def get_grade(self):
         if self.mark >= 70:
             return "Grade: First"
